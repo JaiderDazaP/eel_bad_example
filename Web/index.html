@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script> <!-- Añadir esta línea -->
+    <title>Temperature Monitor</title>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="Resources/ATLAS-Logowhite-big.png" alt="ATLAS Experiment" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#" class="menu-item" id="dashboard" onclick="changeContent('dashboard')">Dashboard</a></li>
+                <li><a href="#" class="menu-item" id="variables" onclick="changeContent('variables')">Variables</a></li>
+                <li><a href="#" class="menu-item" id="alertas" onclick="changeContent('alertas')">Alertas</a></li>
+                <li><a href="#" class="menu-item" id="reportes" onclick="changeContent('reportes')">Reportes</a></li>
+                <li><a href="#" class="menu-item" id="opciones" onclick="changeContent('opciones')">Opciones</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Barra superior -->
+    <div class="topbar">
+        <span class="page-title" id="page-title">ETMS</span> <!-- Título dinámico -->
+        <div class="user-menu">
+            <button id="user-button">
+                <img src="Resources/user-244.svg" alt="Usuario" class="user-icon">
+            </button>
+            <div id="user-dropdown" class="dropdown-content">
+                <a href="#">Ver cuenta</a>
+                <a href="#">Cerrar sesión</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido dinámico -->
+    <div class="content">
+        <div id="dynamic-content">
+            <h1>ETMS</h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
